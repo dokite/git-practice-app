@@ -1,11 +1,11 @@
-# 🎓 Git 연습 웹 Pro
+# 🎓 Git 연습 플랫폼
 
-웹 브라우저에서 Git 명령어를 연습할 수 있는 **완전한** 인터랙티브 학습 플랫폼입니다.
+웹 브라우저에서 Git 명령어를 연습할 수 있는 Git 학습 플랫폼입니다.
 
 ## ✨ 주요 기능
 
 ### 📁 파일 관리
-- ✅ 파일 생성, **수정**, 삭제
+- ✅ 파일 생성, 수정, 삭제
 - ✅ 실시간 파일 상태 표시 (Untracked/Modified/Staged)
 - ✅ Staging Area 시각화
 - ✅ 인라인 파일 편집기
@@ -35,7 +35,7 @@
 - `git fetch` - 원격 변경사항만 가져오기
 
 ### 🎓 학습 기능
-- 단계별 튜토리얼 모드
+- 단계별 튜토리얼 모드 (총 8단계, 추가 개발 예정)
 - 실시간 피드백
 - 원격 저장소 시각화
 - 초보자 친화적인 설명
@@ -43,7 +43,7 @@
 ### 📊 시각화
 - 브랜치 상태 표시
 - 커밋 그래프
-- **원격 저장소 상태** (NEW!)
+- 원격 저장소 상태
 - Staging Area 표시
 - 파일 상태 색상 구분
 - 실시간 터미널 출력
@@ -59,9 +59,11 @@ npm install -D vite @vitejs/plugin-react
 
 ### 개발 서버 실행
 
+필요한 node module이 모두 install된 상태라면 
+`npm run dev` 명령어를 통해 웹 브라우저 실행
 ```bash
-npm install
-npm run dev
+npm install  # package.json에 명시된 node module install
+npm run dev  # 웹 브라우저 실행
 ```
 
 브라우저에서 `http://localhost:5173`으로 접속
@@ -193,6 +195,8 @@ git diff 파일명
 ```
 
 ## 🛠️ 기술 스택
+JAVA 지식 제로 상태에서 react 공부 겸 AI 도움 받아서 슥삭 만들어본 결과물이고,
+추후 디테일 수정, 기능 개선 및 확장 예정.
 
 - **React 18** - UI 라이브러리
 - **Lucide React** - 아이콘
@@ -269,14 +273,7 @@ git pull origin main
 - Cherry-pick의 활용
 - 파일 상태 추적 (Untracked/Modified/Staged)
 - 버전 관리의 실전 워크플로우
-
-## 🤝 기여
-
-이슈와 풀 리퀘스트는 언제든 환영합니다!
-
-## 📄 라이선스
-
-MIT License
+- 추후 추가 예정
 
 ---
 
