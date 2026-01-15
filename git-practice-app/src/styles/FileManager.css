@@ -1,0 +1,249 @@
+/* styles/FileManager.css */
+.file-manager {
+  background-color: #1f2937;
+}
+
+.file-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.file-list-container {
+  margin-top: 1.25rem;
+}
+
+.file-list-title {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.empty-message {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.file-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #374151;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.file-item:hover {
+  background-color: #4b5563;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.file-name {
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  word-break: break-all;
+}
+
+.file-status-badge {
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+.file-status-badge.staged,
+.file-status-badge.committed {
+  color: #10b981;
+  background-color: rgba(16, 185, 129, 0.15);
+}
+
+.file-status-badge.modified {
+  color: #f59e0b;
+  background-color: rgba(245, 158, 11, 0.15);
+}
+
+.file-status-badge.untracked {
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.15);
+}
+
+.file-actions {
+  display: flex;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.action-button {
+  padding: 0.375rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-button:hover {
+  background-color: #4b5563;
+}
+
+.action-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.action-icon.edit {
+  color: #60a5fa;
+}
+
+.action-icon.delete {
+  color: #f87171;
+}
+
+/* File Editing Styles */
+.file-edit-container {
+  width: 100%;
+}
+
+.file-edit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.edit-btn {
+  padding: 0.375rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.save-btn {
+  background-color: #16a34a;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #15803d;
+}
+
+.cancel-btn {
+  background-color: #6b7280;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #4b5563;
+}
+
+.file-edit-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #1f2937;
+  border: 2px solid #60a5fa;
+  border-radius: 0.375rem;
+  color: white;
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  resize: vertical;
+  outline: none;
+}
+
+/* Status Legend */
+.file-status-legend {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #374151;
+  border-radius: 0.5rem;
+}
+
+.legend-title {
+  margin-top: 0rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #d1d5db;
+  margin-bottom: 0.5rem;
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.legend-badge {
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  min-width: 1.5rem;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.legend-badge.untracked {
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.15);
+}
+
+.legend-badge.modified {
+  color: #f59e0b;
+  background-color: rgba(245, 158, 11, 0.15);
+}
+
+.legend-badge.staged {
+  color: #10b981;
+  background-color: rgba(16, 185, 129, 0.15);
+}
+
+@media (max-width: 768px) {
+  .file-actions {
+    opacity: 1;
+  }
+
+  .legend-items {
+    font-size: 0.7rem;
+  }
+}

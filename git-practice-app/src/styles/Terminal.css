@@ -1,0 +1,93 @@
+/* styles/Terminal.css */
+.terminal {
+  background-color: #000000;
+  grid-column: 1 / -1;
+}
+
+.terminal-icon {
+  color: #10b981;
+}
+
+.terminal-output {
+  background-color: #0a0a0a;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  height: 320px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.terminal-line {
+  margin-bottom: 0.25rem;
+  word-wrap: break-word;
+}
+
+.terminal-line.command {
+  color: #22d3ee;
+  font-weight: 600;
+}
+
+.terminal-line.error {
+  color: #f87171;
+}
+
+.terminal-line.success {
+  color: #4ade80;
+}
+
+.terminal-line.warning {
+  color: #fbbf24;
+}
+
+.terminal-line.info {
+  color: #d1d5db;
+}
+
+.terminal-input {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.terminal-prompt {
+  color: #10b981;
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.terminal-field {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-size: 0.95rem;
+  outline: none;
+  padding: 0.5rem 0;
+}
+
+.terminal-field::placeholder {
+  color: #6b7280;
+}
+
+.terminal-hint {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .terminal-output {
+    height: 250px;
+    font-size: 0.8rem;
+  }
+
+  .terminal-field {
+    font-size: 0.875rem;
+  }
+}
