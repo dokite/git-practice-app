@@ -31,8 +31,8 @@ const tutorials = [
   { 
     step: 4, 
     title: '💾 첫 커밋', 
-    instruction: '"git commit -m 첫번째커밋"으로 커밋을 생성하세요.',
-    command: 'git commit -m 첫번째커밋'
+    instruction: '"git commit -m "첫 번째 커밋"으로 커밋을 생성하세요.',
+    command: 'git commit -m "첫 번째 커밋"'
   },
   { 
     step: 5, 

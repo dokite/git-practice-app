@@ -87,6 +87,7 @@ const useGitCommands = (tutorialMode, tutorialStep, setTutorialStep) => {
         untrackedFiles.forEach(file => addToTerminal('error', `        ${file}`));
       }
     }
+    if (tutorialMode && tutorialStep === 2) setTutorialStep(3);
   };
 
   const handleGitAdd = (fileName) => {
@@ -103,6 +104,8 @@ const useGitCommands = (tutorialMode, tutorialStep, setTutorialStep) => {
     } else {
       addToTerminal('error', `❌ pathspec '${fileName}' did not match any files`);
     }
+
+    if (tutorialMode && tutorialStep === 3) setTutorialStep(4);
   };
 
   const handleGitCommit = (message) => {
@@ -137,6 +140,8 @@ const useGitCommands = (tutorialMode, tutorialStep, setTutorialStep) => {
     setLastCommittedFiles({ ...stagingArea });
     setStagingArea({});
     addToTerminal('success', `✅ [${currentBranch} ${commitHash}] ${message}`);
+
+    if (tutorialMode && tutorialStep === 4) setTutorialStep(5);
   };
 
   const handleGitLog = () => {
@@ -191,6 +196,7 @@ const useGitCommands = (tutorialMode, tutorialStep, setTutorialStep) => {
     }
     setBranches(prev => ({ ...prev, [branchName]: [...(prev[currentBranch] || [])] }));
     addToTerminal('success', `✅ Created branch '${branchName}'`);
+    if (tutorialMode && tutorialStep === 5) setTutorialStep(6);
   };
 
   const handleGitCheckout = (branchName) => {
@@ -210,6 +216,7 @@ const useGitCommands = (tutorialMode, tutorialStep, setTutorialStep) => {
     }
     setStagingArea({});
     addToTerminal('success', `✅ Switched to branch '${branchName}'`);
+    if (tutorialMode && tutorialStep === 6) setTutorialStep(7);
   };
 
   const handleGitMerge = (branchName) => {
